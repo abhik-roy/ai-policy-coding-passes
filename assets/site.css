@@ -72,3 +72,70 @@ h2 .n, .list .n { color: var(--muted); font-size: .75rem; font-weight: 600; font
 .op { color: var(--muted); padding: 0 .2rem; }
 .gone { color: var(--muted); text-decoration: line-through; }
 .label { margin: .2rem 0 0; font-size: 1rem; font-weight: 700; }
+.cat { margin-bottom: 1.6rem; }
+.cat-h { margin: 0 0 .6rem; font-size: 1rem; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--ink); }
+.concept { margin: 0 0 .6rem 1.2rem; }
+.concept h3 { display: flex; align-items: baseline; gap: .5rem; margin: 0; padding: .6rem 1rem; border-bottom: 1px solid var(--line); font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--forest); }
+.concept h3 .n { color: var(--muted); font-size: .75rem; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.move { max-width: 13rem; padding: .2rem .3rem; border: 1px solid #cbd4ce; border-radius: .4rem; background: #fff; color: var(--ink); font: inherit; font-size: .75rem; }
+.mini { margin-left: .2rem; padding: .1rem .45rem; border: 1px solid #cbd4ce; border-radius: .4rem; background: #fff; color: var(--muted); font: inherit; font-size: .7rem; font-weight: 600; letter-spacing: 0; text-transform: none; cursor: pointer; }
+.btn { padding: .45rem .9rem; border: 1px solid #cbd4ce; border-radius: .625rem; background: #fff; color: #26332e; font: inherit; font-weight: 600; cursor: pointer; }
+.btn:hover, .mini:hover { background: #f4f7f4; }
+.view-tabs { margin-bottom: 1rem; }
+.tree-wrap { overflow-x: auto; padding: .4rem; }
+.tree { display: block; font: 13px/1 Inter, ui-sans-serif, system-ui, sans-serif; }
+.tree .node { cursor: pointer; }
+.tree .cat-node rect { fill: var(--forest); }
+.tree .cat-node text { fill: #fff; font-weight: 700; }
+.tree .con-node rect { fill: var(--sage); stroke: #c9dacf; }
+.tree .con-node text { fill: var(--forest); font-weight: 700; font-size: 12px; }
+.tree .node:hover rect, .tree .node:focus rect { filter: brightness(.95); }
+.tree .leaf { fill: var(--ink); }
+.tree a:hover .leaf { fill: var(--forest); text-decoration: underline; }
+.tree .leaf-n { fill: var(--muted); font-size: 11px; }
+
+/* preliminary theory page */
+main.theory { display: grid; gap: .9rem; }
+.t-head { font-size: 1.35rem; margin: .25rem 0 .2rem; text-wrap: balance; }
+main.theory .intro p:not(.eyebrow) { color: var(--ink); max-width: 78ch; font-size: .95rem; }
+h2.sec { margin: 1.4rem 0 0; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.cap { margin: 0; max-width: 90ch; }
+.diagram { padding: .6rem; overflow-x: auto; }
+.diagram svg { display: block; width: 100%; min-width: 760px; height: auto; font-family: inherit; }
+.dg rect { fill: var(--surface); stroke: var(--line); stroke-width: 1.3; }
+.dg.core rect { fill: var(--sage); stroke: var(--forest); stroke-width: 1.8; }
+.dg.strain rect { fill: #f6e6e4; stroke: #a8473d; }
+.dg.cond rect { fill: #f6ecdf; stroke: #a75916; }
+.dg.out rect { fill: var(--soft); stroke: var(--muted); stroke-dasharray: 6 5; }
+.dg text { text-anchor: middle; fill: var(--ink); }
+.dg-role { font-size: 10.5px; font-weight: 800; letter-spacing: .08em; fill: var(--muted) !important; }
+.dg-name { font-size: 13.5px; font-weight: 700; }
+.dg-core { font-size: 17px; font-weight: 700; fill: var(--forest) !important; }
+.dg-edge { fill: none; stroke: var(--forest); stroke-width: 1.6; }
+.dg-edge.strain { stroke: #a8473d; }
+.dg-edge.loop { stroke: #a75916; stroke-dasharray: 5 4; }
+.dg-head { fill: var(--forest); } .dg-head-strain { fill: #a8473d; } .dg-head-loop { fill: #a75916; }
+.dg-lab { font-size: 11.5px; fill: var(--muted); text-anchor: middle; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: .8rem; }
+.tcard { padding: .9rem 1rem; display: grid; gap: .45rem; align-content: start; }
+.tcard.core { border-color: var(--forest); box-shadow: inset 0 0 0 1px var(--forest); }
+.tcard-h { display: flex; align-items: baseline; gap: .5rem; }
+.tcard-h h3 { margin: 0; font-size: .98rem; flex: 1; }
+.tcard .role { font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--forest); white-space: nowrap; }
+.tcard p { margin: 0; font-size: .88rem; color: var(--ink); }
+.tcard p.count { color: var(--muted); font-size: .78rem; }
+.concepts { list-style: none; margin: 0; padding: 0; display: grid; gap: .2rem; }
+.concepts li { display: flex; gap: .5rem; padding: .3rem .55rem; border-radius: .45rem; background: var(--soft); font-size: .85rem; font-weight: 600; }
+.concepts .n { margin-left: auto; color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+.steps { margin: 0; padding: .8rem 1rem .8rem 2.2rem; display: grid; gap: .5rem; font-size: .92rem; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
+.list.plain li { font-size: .9rem; }
+.props { display: grid; gap: .6rem; }
+.prop { display: grid; grid-template-columns: 2.6rem 1fr; gap: .4rem; padding: .8rem 1rem; align-items: start; }
+.prop .tag { justify-self: start; }
+.prop .claim { margin: 0; font-weight: 700; font-size: .93rem; }
+.prop blockquote { margin: .4rem 0 .2rem; font-style: italic; }
+.prop .count { margin: 0; }
+main.theory .intro h2.t-head { display: block; font-size: 1.35rem; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--ink); margin: .25rem 0 .3rem; }
+.diagram-img { margin: 0; padding: .6rem; }
+.diagram-img img { display: block; width: 100%; height: auto; max-width: 1321px; margin: 0 auto; }
